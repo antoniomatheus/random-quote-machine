@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { FaQuoteLeft, FaQuoteRight, FaTwitter } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 import {
@@ -13,21 +13,23 @@ import {
   Button,
 } from './styles';
 
-export default function QuoteBox({ quote, author }) {
+export default function QuoteBox({ quote, author, color }) {
   return (
     <Box>
       <Quote>
-        <QuoteSymbolLeft>
+        <QuoteSymbolLeft color={color}>
           <FaQuoteLeft />
         </QuoteSymbolLeft>
-        <QuoteText>{quote}</QuoteText>
-        <QuoteSymbolRight>
+        <QuoteText color={color}>{quote}</QuoteText>
+        <QuoteSymbolRight color={color}>
           <FaQuoteRight />
         </QuoteSymbolRight>
       </Quote>
-      <Author>{author}</Author>
+      <Author color={color}>{author}</Author>
       <ShareButtons>
-        <Button>Share</Button>
+        <Button backgroundColor={color}>
+          <FaTwitter />
+        </Button>
       </ShareButtons>
     </Box>
   );
@@ -36,4 +38,5 @@ export default function QuoteBox({ quote, author }) {
 QuoteBox.propTypes = {
   quote: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 };

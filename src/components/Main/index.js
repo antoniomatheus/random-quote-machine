@@ -24,8 +24,6 @@ class Main extends Component {
   async fetchNewQuote() {
     const { data } = await api.get('/random');
 
-    console.log(data);
-
     this.setState({
       quote: data.content,
       author: data.author,
@@ -35,10 +33,17 @@ class Main extends Component {
   render() {
     const { quote, author } = this.state;
 
+    const centralHue = Math.floor(Math.random() * 360);
+    const primaryColor = `hsl(${centralHue}, 50%, 50%)`;
+    const leftColor = `hsl(${centralHue + 30}, 50%, 50%)`;
+    const rightColor = `hsl(${centralHue - 30}, 50%, 50%)`;
+
     return (
-      <Container>
-        <QuoteBox quote={quote} author={author} />
-        <Button onClick={this.fetchNewQuote}>New Quote</Button>
+      <Container leftColor={leftColor} rightColor={rightColor}>
+        <QuoteBox quote={quote} author={author} color={primaryColor} />
+        <Button onClick={this.fetchNewQuote} color={primaryColor}>
+          New Quote
+        </Button>
       </Container>
     );
   }

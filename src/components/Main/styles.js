@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
-  background: linear-gradient(90deg, #7159c1, #a559c1);
+  background: ${props =>
+    `linear-gradient(-45deg, ${props.leftColor}, ${props.rightColor})`};
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,8 +16,15 @@ export const Button = styled.button.attrs({
 })`
   position: absolute;
   bottom: 150px;
-  padding: 8px;
+  padding: 10px;
+  font-size: 20px;
   background-color: #fff;
+  color: ${props => props.color};
   border: none;
   border-radius: 4px;
+
+  &:hover {
+    transition: all 0.2s;
+    background-color: ${darken(0.1, '#fff')};
+  }
 `;

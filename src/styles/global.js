@@ -11,4 +11,12 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   }
 
+  body {
+    -webkit-font-smoothing: antialiased !important;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
 `;
