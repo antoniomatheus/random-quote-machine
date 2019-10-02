@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/random-machine-quote/static/js/main.aaf0c532.chunk.js",
+    "main.js.map": "/random-machine-quote/static/js/main.aaf0c532.chunk.js.map",
+    "runtime-main.js": "/random-machine-quote/static/js/runtime-main.9b35a964.js",
+    "runtime-main.js.map": "/random-machine-quote/static/js/runtime-main.9b35a964.js.map",
+    "static/js/2.f6493428.chunk.js": "/random-machine-quote/static/js/2.f6493428.chunk.js",
+    "static/js/2.f6493428.chunk.js.map": "/random-machine-quote/static/js/2.f6493428.chunk.js.map",
+    "index.html": "/random-machine-quote/index.html",
+    "precache-manifest.720deb877a6750f768fc926d914955e4.js": "/random-machine-quote/precache-manifest.720deb877a6750f768fc926d914955e4.js",
+    "service-worker.js": "/random-machine-quote/service-worker.js"
+  }
+}
