@@ -19,4 +19,9 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  }
 `;

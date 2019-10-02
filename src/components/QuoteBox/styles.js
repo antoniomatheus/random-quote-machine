@@ -5,7 +5,11 @@ export const Box = styled.div`
   background-color: #fff;
   border-radius: 4px;
   padding: 20px;
-  width: 600px;
+  width: 40%;
+
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const Quote = styled.div`
@@ -15,25 +19,26 @@ export const Quote = styled.div`
 `;
 
 export const QuoteText = styled.p`
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
   padding: 6px;
   color: ${props => props.color};
 `;
 
 export const QuoteSymbolLeft = styled.div`
-  font-size: 36px;
+  font-size: 2rem;
   color: ${props => props.color};
 `;
 
 export const QuoteSymbolRight = styled.div`
-  font-size: 36px;
+  font-size: 2rem;
   align-self: flex-end;
   color: ${props => props.color};
 `;
 
 export const Author = styled.p`
   margin: 30px;
+  font-size: 1rem;
   color: ${props => props.color};
   font-style: italic;
 `;
@@ -47,7 +52,7 @@ export const ShareLink = styled.a.attrs({ type: 'button' })`
   background-color: ${props => props.backgroundColor};
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.5rem;
   padding: 8px 12px;
   border: none;
   border-radius: 4px;

@@ -15,9 +15,9 @@ export const Button = styled.button.attrs({
   type: 'button',
 })`
   position: absolute;
-  bottom: 150px;
+  bottom: 10%;
   padding: 10px;
-  font-size: 20px;
+  font-size: 1.5rem;
   background-color: #fff;
   color: ${props => props.color};
   border: none;
