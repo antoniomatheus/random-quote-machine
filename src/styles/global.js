@@ -15,7 +15,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important;
   }
 
-  button {
+  button, a {
     cursor: pointer;
   }
 

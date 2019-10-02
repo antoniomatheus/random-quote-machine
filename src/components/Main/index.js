@@ -41,7 +41,11 @@ class Main extends Component {
     return (
       <Container leftColor={leftColor} rightColor={rightColor}>
         <QuoteBox quote={quote} author={author} color={primaryColor} />
-        <Button onClick={this.fetchNewQuote} color={primaryColor}>
+        <Button
+          id="new-quote"
+          onClick={this.fetchNewQuote}
+          color={primaryColor}
+        >
           New Quote
         </Button>
       </Container>

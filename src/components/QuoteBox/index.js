@@ -10,26 +10,37 @@ import {
   QuoteText,
   ShareButtons,
   Author,
-  Button,
+  ShareLink,
 } from './styles';
 
 export default function QuoteBox({ quote, author, color }) {
+  const tweetText = encodeURIComponent(`${quote} - ${author}.`);
+
   return (
-    <Box>
+    <Box id="quote-box">
       <Quote>
         <QuoteSymbolLeft color={color}>
           <FaQuoteLeft />
         </QuoteSymbolLeft>
-        <QuoteText color={color}>{quote}</QuoteText>
+        <QuoteText color={color} id="text">
+          {quote}
+        </QuoteText>
         <QuoteSymbolRight color={color}>
           <FaQuoteRight />
         </QuoteSymbolRight>
       </Quote>
-      <Author color={color}>{author}</Author>
+      <Author color={color} id="author">
+        {author}
+      </Author>
       <ShareButtons>
-        <Button backgroundColor={color}>
+        <ShareLink
+          id="tweet-quote"
+          backgroundColor={color}
+          href={`https://twitter.com/intent/tweet?text=${tweetText}`}
+          target="_blank"
+        >
           <FaTwitter />
-        </Button>
+        </ShareLink>
       </ShareButtons>
     </Box>
   );

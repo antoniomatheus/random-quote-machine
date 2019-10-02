@@ -43,7 +43,7 @@ export const ShareButtons = styled.div`
   justify-content: flex-end;
 `;
 
-export const Button = styled.button.attrs({ type: 'button' })`
+export const ShareLink = styled.a.attrs({ type: 'button' })`
   background-color: ${props => props.backgroundColor};
   color: #fff;
   font-weight: bold;
