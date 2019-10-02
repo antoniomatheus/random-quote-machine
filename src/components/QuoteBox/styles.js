@@ -37,8 +37,8 @@ export const QuoteSymbolRight = styled.div`
 `;
 
 export const Author = styled.p`
-  margin: 30px;
-  font-size: 1rem;
+  margin: 15px;
+  font-size: 1.5rem;
   color: ${props => props.color};
   font-style: italic;
 `;
