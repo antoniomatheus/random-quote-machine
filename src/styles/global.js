@@ -21,7 +21,7 @@ export default createGlobalStyle`
 
   @media only screen and (max-width: 768px) {
     html {
-      font-size: 14px;
+      font-size: 9px;
     }
   }
 `;
